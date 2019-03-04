@@ -1980,3 +1980,11 @@ span.border.two:after {
 		padding: 6px 0;
 	}
 }
+
+div.centre {
+	width: 350px;
+	display: block;
+	background-color: rgba(0, 56, 66, 0.185);
+	margin-left: auto;
+	margin-right: auto;
+}
