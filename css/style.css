@@ -1087,7 +1087,7 @@ div#portfolioModal1,div#portfolioModal2,div#portfolioModal3,div#portfolioModal4,
 .contact-grid1-left1 {
     padding: 2em;
     border-bottom: 1px ridge rgb(214, 212, 212);
-    background:#fff;
+    background:rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 .contact-grid1-left1 span {
