@@ -35,15 +35,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		</script>
  <!---- start-smoth-scrolling---->
- <link rel = "stylesheet" type = "text/css" href = "loader/style.css" />
- <script type="text/javascript" src="loader/script.js"></script>
+ <!-- <link rel = "stylesheet" type = "text/css" href = "loader/style.css" /> -->
+ <!-- <script type="text/javascript" src="loader/script.js"></script> -->
  <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
-	<body>
+	<body onload="preLoaderHandler()">
 		<!-- container -->
 			<!-- header -->
-			<div id="loader"></div>
+			<div id="loading">
+
+			</div>
 			<div id="content">
 				<div id="home" class="header">
 					<div class="container">
@@ -907,7 +909,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<!--end-smooth-scrolling-->
 <!-- //for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
-	
+	<script>
+		var preloader = document.getElementById('loading');
+		function preLoaderHandler(){
+			preloader.style.display = 'none';
+		}
+	</script>
 
 	</body>
 </html>
