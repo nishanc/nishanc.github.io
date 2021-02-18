@@ -215,14 +215,19 @@
             </div>
             <div class="row row-copirayt">
                 <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                    © Copyright 2020 Nishan Wickramarathna - All Rights Reserved
+                    © Copyright <span id="year"></span> Nishan Wickramarathna - All Rights Reserved
                 </p>
             </div>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 </section>
 
-
+  <script>
+      document.getElementById("year").innerHTML=(new Date).getFullYear();
+  </script>
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
