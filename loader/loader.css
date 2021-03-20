@@ -14,8 +14,7 @@
 }
 
 .text-load-body-fixed {
-	font: Georgia, serif;
-
+	font-family: Georgia, serif;
 	text-align: center;
 	position: fixed;
 	width: 50%;
