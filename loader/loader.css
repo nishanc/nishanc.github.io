@@ -2,17 +2,30 @@
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background: #002733 url('https://i.pinimg.com/originals/cc/87/84/cc87848693f5d5123cad63f60f74eff4.gif') no-repeat center;
+	background: #fefefe url('https://media.tenor.com/images/dc545e5a0f93c9b2bf1d4f0af54ebbff/tenor.gif') no-repeat center;
 	z-index: 2000;
 }
 
 .text-load {
-	font: small-caps 12px/30px Verdana, serif;
+	font: small-caps 17px/30px Georgia, serif;
 	padding: 70px 0;
 	text-align: center;
-	color: white;
+	color: f88b84;
+}
+
+.text-load-body-fixed {
+	font: 17px/30px Georgia, serif;
+	text-align: center;
+	position: fixed;
+	width: 50%;
+	bottom: 10px;
+	bottom:0px;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color: f88b84;
 }
 
 /* https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif */
 /* https://i.pinimg.com/originals/72/66/03/7266036c9f3383d21730484150602f01.gif */
 /* https://cdn.dribbble.com/users/1744106/screenshots/3969277/loading86.gif */
+/* https://i.pinimg.com/originals/cc/87/84/cc87848693f5d5123cad63f60f74eff4.gif */
