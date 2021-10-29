@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#083c4c">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/iconfinder-icon-code-2867880-128x128.png" type="image/x-icon">
-  <meta name="description" content="A dedicated professional with experience in the Information Technology field. Skilled at building strong team environments with self-learning abilities, track record of incorporating user & business requirements in to effective, secure, user-friendly solutions.">
+  <link rel="shortcut icon" href="assets/images/icon-128x128.png" type="image/x-icon">
+  <meta name="description" content="A dedicated professional with experience in the Information Technology field. Skilled at building strong team environments with self-learning abilities, track record of incorporating user & business requirements into effective, secure and user-friendly solutions.">
   
   
   <title>Nishan Chathuranga Wickramarathna</title>
@@ -29,14 +29,17 @@
   
 </head>
 <body onload="preLoaderHandler()">
-    <div id="loading">
+    <!-- <div id="loading">
         <div class="text-load">
             Loading...
         </div>
         <div class="text-load-body-fixed">
             A dedicated software developer,<br>skilled at incorporating user &amp; business requirements into effective, secure, user-friendly solutions.
         </div>
-    </div>
+    </div> -->
+    <div class="footer" id="loading">
+    </div>  
+
     <div id="content">
 
         <section class="menu cid-rZUl8VhiUV" once="menu" id="menu1-k">
@@ -616,7 +619,7 @@
                     Skill Set</h2>
         
                 <h3 class="mbr-section-subtitle mbr-fonts-style display-5">
-                    I am familier with following technologies, programming languages, frameworks and services. I have used them in my previos projects and continuously learning everyday.
+                    I am familier with following technologies, programming languages, frameworks and services. I have used them in my previous projects and continuously learning everyday.
                 </h3>
             
                 <div class="media-container-row pt-5 mt-2">
@@ -1083,7 +1086,7 @@
                             <div class="social-list align-right">
 
                                 <div class="soc-item">
-                                    <a href="https://twitter.com/NishanWrites" target="_blank">
+                                    <a href="https://twitter.com/DevNishanC" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
                                     </a>
                                 </div>
@@ -1093,7 +1096,7 @@
                                     </a>
                                 </div>
                                 <div class="soc-item">
-                                    <a href="https://medium.com/@nishancw" target="_blank">
+                                    <a href="https://nishanc.medium.com" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-medium socicon"></span>
                                     </a>
                                 </div>
@@ -1156,29 +1159,9 @@
   <script src="assets/gallery/script.js"></script>
   
   <script>
-    // var w = document.getElementById('wrapper-vid');
-    // var quotes = w.children; // inner elements, your quotes divs
-    // console.log(quotes)
-    // // a function to hide all divs
-    // var hideDivs = function(divs) {
-    //     for (var div of divs) {
-    //         div.style.display = 'none';
-    //     }
-    // }
-
-    // hideDivs(quotes); // hide all initially
-
-    // // on click
-    // function codeAddress() {
-    //     var rnd = Math.floor(Math.random() * quotes.length); // get random index
-    //     hideDivs(quotes); // hide all quotes
-    //     quotes[rnd].style.display = 'block'; 
-    // }
-
     var preloader = document.getElementById('loading');
     function preLoaderHandler(){
         preloader.style.display = 'none';
-        //codeAddress();
     }
 
     document.getElementById("year").innerHTML=(new Date).getFullYear();
