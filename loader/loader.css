@@ -4,6 +4,9 @@
 	height: 100vh;
 	background: #fefefe url('https://cdn.dribbble.com/users/1744106/screenshots/3969277/loading86.gif') no-repeat center;
 } */
+/* body {
+	overflow-y: hidden; // Hide vertical scrollbar
+} */
 
 .text-load {
 	font: small-caps 17px/30px Georgia, serif;
