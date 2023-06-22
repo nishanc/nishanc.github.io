@@ -106,7 +106,7 @@
         </nav>
     </section>
 
-    <section data-bs-version="5.1" class="header13 cid-tHj32fmcKh mbr-fullscreen"
+    <section data-bs-version="5.1" class="header13 cid-tHj32fmcKh mbr-fullscreen reveal"
         data-bg-video="https://youtu.be/meH3eZS8oV0" id="header13-m">
 
 
@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="header15 cid-tHj37iyL8e" id="header15-n">
+    <section data-bs-version="5.1" class="header15 cid-tHj37iyL8e reveal" id="header15-n">
 
 
 
@@ -194,7 +194,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="info3 cid-tHsbmDyw5V mbr-parallax-background" id="info3-1n">
+    <section data-bs-version="5.1" class="info3 cid-tHsbmDyw5V mbr-parallax-background reveal" id="info3-1n">
 
 
 
@@ -222,7 +222,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="features5 cid-tHjFg4V0k3" id="features6-o">
+    <section data-bs-version="5.1" class="features5 cid-tHjFg4V0k3 reveal" id="features6-o">
 
 
 
@@ -268,7 +268,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="features5 cid-tHrNO5IAHu" id="features6-u">
+    <section data-bs-version="5.1" class="features5 cid-tHrNO5IAHu reveal" id="features6-u">
 
 
 
@@ -314,7 +314,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="features16 cid-tHrO1hk8S0" id="features17-v">
+    <section data-bs-version="5.1" class="features16 cid-tHrO1hk8S0 reveal" id="features17-v">
 
 
 
@@ -350,7 +350,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="footer6 cid-tHrW7Mn6UW" once="footers" id="footer6-1k">
+    <section data-bs-version="5.1" class="footer6 cid-tHrW7Mn6UW reveal" once="footers" id="footer6-1k">
 
 
 
@@ -459,7 +459,22 @@
         }
     
         document.getElementById("year").innerHTML=(new Date).getFullYear();
-    
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            let elements = document.querySelectorAll('.reveal');
+
+            for (let index = 0; index < elements.length; index++) {
+                let windowHeight = window.innerHeight;
+                let revealTop = elements[index].getBoundingClientRect().top;
+                var revealPoint = 100;
+                if(revealTop < windowHeight - revealPoint){
+                    elements[index].classList.add('active');
+                } else {
+                    elements[index].classList.remove('active');
+                }
+            }
+        }
       </script>
 
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i

@@ -105,7 +105,7 @@
         </nav>
     </section>
 
-    <section data-bs-version="5.1" class="share3 cid-tHrWMLAMSn" id="share3-1m">
+    <section data-bs-version="5.1" class="share3 cid-tHrWMLAMSn reveal" id="share3-1m">
 
 
 
@@ -157,7 +157,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="form5 cid-tHrWqRJH8L" id="form5-1l">
+    <section data-bs-version="5.1" class="form5 cid-tHrWqRJH8L reveal" id="form5-1l">
 
 
         <div class="container">
@@ -202,7 +202,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="footer6 cid-tHrW7Mn6UW" once="footers" id="footer6-1k">
+    <section data-bs-version="5.1" class="footer6 cid-tHrW7Mn6UW reveal" once="footers" id="footer6-1k">
 
 
 
@@ -311,7 +311,22 @@
         }
     
         document.getElementById("year").innerHTML=(new Date).getFullYear();
-    
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            let elements = document.querySelectorAll('.reveal');
+
+            for (let index = 0; index < elements.length; index++) {
+                let windowHeight = window.innerHeight;
+                let revealTop = elements[index].getBoundingClientRect().top;
+                var revealPoint = 100;
+                if(revealTop < windowHeight - revealPoint){
+                    elements[index].classList.add('active');
+                } else {
+                    elements[index].classList.remove('active');
+                }
+            }
+        }
       </script>
 
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i

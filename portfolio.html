@@ -42,7 +42,6 @@
     <div class="footer" id="loading">
     </div> 
     <section data-bs-version="5.1" class="menu menu2 cid-tHj2niDiQI" once="menu" id="menu2-1g">
-
         <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
             <div class="container-fluid">
                 <div class="navbar-brand">
@@ -104,14 +103,9 @@
         </nav>
     </section>
 
-    <section data-bs-version="5.1" class="timeline2 cid-tHrVAJe777" id="timeline2-1h">
-
-
-
-
-
+    <section data-bs-version="5.1" class="timeline2 cid-tHrVAJe777 reveal" id="timeline2-1h">
         <div class="container">
-            <div class="mbr-section-head">
+            <div class="mbr-section-head reveal">
                 <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
                     <strong>Portfolio</strong><strong><br></strong>
                 </h3>
@@ -121,7 +115,7 @@
                     your upcoming endeavors.<br><br></h4>
             </div>
             <div class="timelines-container mt-4">
-                <div class="row timeline-element separline mb-5">
+                <div class="row timeline-element separline mb-5 reveal">
                     <div class="timeline-date-panel col-12 col-md-4">
                         <div class="time-line-date-content">
                             <h4 class="mbr-timeline-date mbr-fonts-style display-5">
@@ -149,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row timeline-element separline mb-5">
+                <div class="row timeline-element separline mb-5 reveal">
                     <div class="timeline-date-panel col-12 col-md-4">
                         <div class="time-line-date-content">
                             <h4 class="mbr-timeline-date mbr-fonts-style display-5">
@@ -180,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row timeline-element separline mb-5">
+                <div class="row timeline-element separline mb-5 reveal">
                     <div class="timeline-date-panel col-12 col-md-4">
                         <div class="time-line-date-content">
                             <h4 class="mbr-timeline-date mbr-fonts-style display-5">
@@ -208,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row timeline-element separline mb-5">
+                <div class="row timeline-element separline mb-5 reveal">
                     <div class="timeline-date-panel col-12 col-md-4">
                         <div class="time-line-date-content">
                             <h4 class="mbr-timeline-date mbr-fonts-style display-5">
@@ -238,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row timeline-element separline mb-5">
+                <div class="row timeline-element separline mb-5 reveal">
                     <div class="timeline-date-panel col-12 col-md-4">
                         <div class="time-line-date-content">
                             <h4 class="mbr-timeline-date mbr-fonts-style display-5">
@@ -264,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row timeline-element separline mb-5">
+                <div class="row timeline-element separline mb-5 reveal">
                     <div class="timeline-date-panel col-12 col-md-4">
                         <div class="time-line-date-content">
                             <h4 class="mbr-timeline-date mbr-fonts-style display-5"><strong>2016 - 2020</strong></h4>
@@ -282,8 +276,16 @@
                             <div class="image-wrapper mb-4">
                                 <img src="assets/images/stop.gif" alt="Stop sign recognition" title="">
                             </div>
-                            <div class="image-wrapper mb-4" style="width: 250px;">
-                                <img src="assets/images/text-detection.gif" alt="Text detection" title="">
+                            <div class="row">
+                                <div class="image-wrapper mb-4" style="width: 250px;">
+                                    <img src="assets/images/text-detection.gif" alt="Text detection" title="">
+                                </div>
+                                <div class="image-wrapper mb-4" style="width: 250px;">
+                                    <img src="assets/images/awake.gif" alt="Text detection" title="">
+                                </div>
+                                <div class="image-wrapper mb-4" style="width: 250px;">
+                                    <img src="assets/images/quiz.gif" alt="Text detection" title="">
+                                </div>
                             </div>
                             <p class="mbr-text mbr-fonts-style display-7">
                                 These are just small android applications I built for simple tasks, such as keeping the
@@ -292,17 +294,11 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="footer6 cid-tHrW7Mn6UW" once="footers" id="footer6-1k">
+    <section data-bs-version="5.1" class="footer6 cid-tHrW7Mn6UW reveal" once="footers" id="footer6-1k">
 
 
 
@@ -409,7 +405,22 @@
         }
     
         document.getElementById("year").innerHTML=(new Date).getFullYear();
-    
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            let elements = document.querySelectorAll('.reveal');
+
+            for (let index = 0; index < elements.length; index++) {
+                let windowHeight = window.innerHeight;
+                let revealTop = elements[index].getBoundingClientRect().top;
+                var revealPoint = 100;
+                if(revealTop < windowHeight - revealPoint){
+                    elements[index].classList.add('active');
+                } else {
+                    elements[index].classList.remove('active');
+                }
+            }
+        }
       </script>
 
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
