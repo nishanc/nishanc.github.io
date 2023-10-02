@@ -975,3 +975,11 @@ blockquote {
   transform: translateY(0px);
   opacity: 1;
 }
+
+#footer6-1k {
+  background-color: #280045 !important; /* Red color */
+}
+
+#footer6-1k a:hover {
+  color: #db3164 !important;
+}
