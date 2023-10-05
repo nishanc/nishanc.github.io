@@ -28,16 +28,16 @@
 
 .footer {
     z-index: 9999;
-    background-color: #e0ddc9;
+    background-color: #000220;
     width: 25%;
     height: 10vw;
     position: fixed;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url('https://cdn.dribbble.com/users/1397550/screenshots/3302754/dog_konchenkov.gif');
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url('https://cdn.dribbble.com/users/760347/screenshots/7341673/loading_ps.gif');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 80%;
     background-position: center;
     background-position-y: 47%;
     background-clip: content-box;
@@ -48,19 +48,21 @@
 @media only screen and (max-width: 600px) {
 	.footer {
 		z-index: 9999;
-		background-color: #0b1425;
+		background-color: #000220;
 		width: 100%;
-		height: 20vw;
-		bottom: 0;
+		height: 20%;
 		position: fixed;
-		background-image: url('https://d33wubrfki0l68.cloudfront.net/e0519fd6fa113912df237f6bd97394bb319cca32/b6a09/uploads/slidin-squares.gif');
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+		background-image: url('https://cdn.dribbble.com/users/760347/screenshots/7341673/loading_ps.gif');
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 60%; /* Increase the image size to 110% */
 		background-position: center;
 		background-position-y: 47%;
 		background-clip: content-box;
 		padding: 10px;
-		border-radius:20px;
+		border-radius: 20px;
 	}
 }
 /* https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif */
