@@ -4469,6 +4469,17 @@ a {
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+@media (max-width: 768px) {
+  .cid-tHrTfz5D3m .embla__viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cid-tHrTfz5D3m .embla__container {
+    transform: none !important;
+  }
+}
 .cid-tHrW7Mn6UW {
   padding-top: 75px;
   padding-bottom: 75px;
