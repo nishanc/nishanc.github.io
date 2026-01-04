@@ -69,6 +69,101 @@
       href="assets/mobirise/css/mbr-additional.css"
       type="text/css"
     />
+    <style>
+      .portfolio-embla {
+        position: relative;
+        width: 100%;
+      }
+
+      .portfolio-embla .embla__viewport {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .portfolio-embla .embla__viewport.is-draggable {
+        cursor: grab;
+      }
+
+      .portfolio-embla .embla__viewport.is-dragging {
+        cursor: grabbing;
+      }
+
+      .portfolio-embla .embla__container {
+        display: flex;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .portfolio-embla .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+      }
+
+      .portfolio-embla .embla__slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .portfolio-embla .embla__button {
+        top: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin-top: -1.5rem;
+        font-size: 22px;
+        background-color: rgba(var(--bs-dark-rgb), 0.5);
+        color: var(--bs-white);
+        border: 2px solid var(--bs-white);
+        border-radius: 50%;
+        transition: all 0.3s;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+      }
+
+      @media (max-width: 768px) {
+        .portfolio-embla .embla__button {
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-top: -1.25rem;
+        }
+      }
+
+      .portfolio-embla .embla__button:disabled {
+        cursor: default;
+        display: none;
+      }
+
+      .portfolio-embla .embla__button:hover {
+        background-color: rgba(var(--bs-dark-rgb), 0.75);
+      }
+
+      .portfolio-embla .embla__button.embla__button--prev {
+        left: 0;
+        margin-left: 1.25rem;
+      }
+
+      .portfolio-embla .embla__button.embla__button--next {
+        right: 0;
+        margin-right: 1.25rem;
+      }
+
+      @media (max-width: 768px) {
+        .portfolio-embla .embla__viewport {
+          overflow-x: auto;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .portfolio-embla .embla__container {
+          transform: none !important;
+        }
+      }
+    </style>
     <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
   </head>
 
@@ -228,6 +323,502 @@
           </h4>
         </div>
         <div class="timelines-container mt-4">
+          <div class="row timeline-element separline mb-5 reveal">
+            <div class="timeline-date-panel col-12 col-md-4">
+              <div class="time-line-date-content">
+                <h4 class="mbr-timeline-date mbr-fonts-style display-5">
+                  <strong
+                    >2024 October | While working at XEYNERGY LLC (Associate
+                    Technical Lead)</strong
+                  >
+                </h4>
+              </div>
+            </div>
+            <span class="iconBackground"></span>
+            <div class="col-12 col-md-8">
+              <div class="timeline-text-content">
+                <h4 class="mbr-timeline-title mb-4 mbr-fonts-style display-5">
+                  <a
+                    href="https://tcms-global.com/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>TCMS Journey Navigator</strong></a
+                  >
+                </h4>
+                <div class="image-wrapper mb-4">
+                  <div
+                    class="embla portfolio-embla"
+                    data-auto-play="true"
+                    data-auto-play-interval="2"
+                  >
+                    <div class="embla__viewport">
+                      <div class="embla__container">
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/nav1.webp"
+                            alt="TCMS Journey Navigator screenshot 1"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/nav2.webp"
+                            alt="TCMS Journey Navigator screenshot 2"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/nav3.webp"
+                            alt="TCMS Journey Navigator screenshot 3"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/nav4.webp"
+                            alt="TCMS Journey Navigator screenshot 4"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="embla__button embla__button--prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Previous</span
+                      >
+                    </button>
+                    <button
+                      class="embla__button embla__button--next"
+                      type="button"
+                      aria-label="Next"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Next</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Client:
+                  <a
+                    href="https://tcms-global.com/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Tank and Container Management Systems (TCMS)</strong></a
+                  ><br />
+                  Tech stack: <strong>.NET</strong> (C#), <strong>Angular</strong>,
+                  <strong>Azure</strong>, <strong>SQL Server</strong>.<br />
+                  Intermodal logistics web app to manage trips with segment-level
+                  drill-down, precise trip controls, and document handling for
+                  equipment and shipments.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row timeline-element separline mb-5 reveal">
+            <div class="timeline-date-panel col-12 col-md-4">
+              <div class="time-line-date-content">
+                <h4 class="mbr-timeline-date mbr-fonts-style display-5">
+                  <strong
+                    >2024 August | While working at XEYNERGY LLC (Associate
+                    Technical Lead)</strong
+                  >
+                </h4>
+              </div>
+            </div>
+            <span class="iconBackground"></span>
+            <div class="col-12 col-md-8">
+              <div class="timeline-text-content">
+                <h4 class="mbr-timeline-title mb-4 mbr-fonts-style display-5">
+                  <a
+                    href="https://bourquelogistics.com/yardmaster-truck/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Yard Master Truck Portal</strong></a
+                  >
+                </h4>
+                <div class="image-wrapper mb-4">
+                  <div
+                    class="embla portfolio-embla"
+                    data-auto-play="true"
+                    data-auto-play-interval="2"
+                  >
+                    <div class="embla__viewport">
+                      <div class="embla__container">
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/ym.webp"
+                            alt="Yard Master Truck Portal screenshot 1"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/ym2.webp"
+                            alt="Yard Master Truck Portal screenshot 2"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/ym3.webp"
+                            alt="Yard Master Truck Portal screenshot 3"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/ym4.webp"
+                            alt="Yard Master Truck Portal screenshot 4"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="embla__button embla__button--prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Previous</span
+                      >
+                    </button>
+                    <button
+                      class="embla__button embla__button--next"
+                      type="button"
+                      aria-label="Next"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Next</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Client:
+                  <a
+                    href="https://bourquelogistics.com/yardmaster-truck/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Bourque Logistics, Inc. (USA)</strong></a
+                  ><br />
+                  Tech stack: <strong>.NET</strong> (C#), <strong>Angular</strong>,
+                  <strong>Azure</strong>, <strong>SQL Server</strong>.<br />
+                  In-plant truck-yard portal to automate check-in/check-out,
+                  inspections, weigh scale integration, and shipment processing,
+                  including DOT-compliant BOL generation with digital signatures.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row timeline-element separline mb-5 reveal">
+            <div class="timeline-date-panel col-12 col-md-4">
+              <div class="time-line-date-content">
+                <h4 class="mbr-timeline-date mbr-fonts-style display-5">
+                  <strong
+                    >2023 October | While working at XEYNERGY LLC (Associate
+                    Technical Lead)</strong
+                  >
+                </h4>
+              </div>
+            </div>
+            <span class="iconBackground"></span>
+            <div class="col-12 col-md-8">
+              <div class="timeline-text-content">
+                <h4 class="mbr-timeline-title mb-4 mbr-fonts-style display-5">
+                  <a
+                    href="https://wrapme.lk/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>WrapMe</strong></a
+                  >
+                </h4>
+                <div class="image-wrapper mb-4">
+                  <div
+                    class="embla portfolio-embla"
+                    data-auto-play="true"
+                    data-auto-play-interval="2"
+                  >
+                    <div class="embla__viewport">
+                      <div class="embla__container">
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/wrpame1.webp"
+                            alt="WrapMe screenshot 1"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/wrpame2.webp"
+                            alt="WrapMe screenshot 2"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/wrpame3.webp"
+                            alt="WrapMe screenshot 3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="embla__button embla__button--prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Previous</span
+                      >
+                    </button>
+                    <button
+                      class="embla__button embla__button--next"
+                      type="button"
+                      aria-label="Next"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Next</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Client:
+                  <a
+                    href="https://wrapme.lk/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>WrapMe.lk</strong></a
+                  ><br />
+                  Tech stack: <strong>.NET</strong> (C#), <strong>Angular</strong>,
+                  <strong>Azure</strong>, <strong>SQL Server</strong>.<br />
+                  E-commerce gifting platform for curated hampers and build-your-own
+                  gift boxes, with support for corporate/bulk gifting.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row timeline-element separline mb-5 reveal">
+            <div class="timeline-date-panel col-12 col-md-4">
+              <div class="time-line-date-content">
+                <h4 class="mbr-timeline-date mbr-fonts-style display-5">
+                  <strong
+                    >2020 April &ndash; 2023 September | While working at 99x (Adra
+                    / Trintech USA)</strong
+                  >
+                </h4>
+              </div>
+            </div>
+            <span class="iconBackground"></span>
+            <div class="col-12 col-md-8">
+              <div class="timeline-text-content">
+                <h4 class="mbr-timeline-title mb-4 mbr-fonts-style display-5">
+                  <a
+                    href="https://www.trintech.com/adra/task-manager/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Adra Task Manager</strong></a
+                  >
+                </h4>
+                <div class="image-wrapper mb-4">
+                  <div
+                    class="embla portfolio-embla"
+                    data-auto-play="true"
+                    data-auto-play-interval="2"
+                  >
+                    <div class="embla__viewport">
+                      <div class="embla__container">
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/tm1.webp"
+                            alt="Adra Task Manager screenshot 1"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/tm2.webp"
+                            alt="Adra Task Manager screenshot 2"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/tm3.webp"
+                            alt="Adra Task Manager screenshot 3"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/tm4.webp"
+                            alt="Adra Task Manager screenshot 4"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="embla__button embla__button--prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Previous</span
+                      >
+                    </button>
+                    <button
+                      class="embla__button embla__button--next"
+                      type="button"
+                      aria-label="Next"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Next</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Client:
+                  <a
+                    href="https://www.trintech.com/adra/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Adra by Trintech (USA)</strong></a
+                  ><br />
+                  Tech stack: <strong>.NET</strong> (C#), <strong>Angular</strong>,
+                  <strong>Azure</strong>, <strong>SQL Server</strong>.<br />
+                  Automated financial-close task management with centralized
+                  checklists/task libraries, real-time dashboards, and
+                  notifications/alerts to improve visibility and reduce bottlenecks.
+                  <br />
+                  Role: <strong>Software Engineer</strong> (2020 April &ndash; 2022
+                  February) and <strong>Senior Software Engineer</strong> (2022
+                  February &ndash; 2023 September) at
+                  <strong>99X PVT. LTD, Colombo, Sri Lanka</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row timeline-element separline mb-5 reveal">
+            <div class="timeline-date-panel col-12 col-md-4">
+              <div class="time-line-date-content">
+                <h4 class="mbr-timeline-date mbr-fonts-style display-5">
+                  <strong
+                    >2018 September | While working as an Intern Software
+                    Engineer at 99x</strong
+                  >
+                </h4>
+              </div>
+            </div>
+            <span class="iconBackground"></span>
+            <div class="col-12 col-md-8">
+              <div class="timeline-text-content">
+                <h4 class="mbr-timeline-title mb-4 mbr-fonts-style display-5">
+                  <a
+                    href="https://www.packsend.com.au/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Pack &amp; Send Australia</strong></a
+                  >
+                </h4>
+                <div class="image-wrapper mb-4">
+                  <div
+                    class="embla portfolio-embla"
+                    data-auto-play="true"
+                    data-auto-play-interval="2"
+                  >
+                    <div class="embla__viewport">
+                      <div class="embla__container">
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/ps1.webp"
+                            alt="Pack & Send Australia screenshot 1"
+                          />
+                        </div>
+                        <div class="embla__slide">
+                          <img
+                            src="assets/images/portfolio/ps2.webp"
+                            alt="Pack & Send Australia screenshot 2"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="embla__button embla__button--prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Previous</span
+                      >
+                    </button>
+                    <button
+                      class="embla__button embla__button--next"
+                      type="button"
+                      aria-label="Next"
+                    >
+                      <span
+                        class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only visually-hidden visually-hidden"
+                        >Next</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Client:
+                  <a
+                    href="https://www.packsend.com.au/"
+                    class="text-primary"
+                    target="_blank"
+                    ><strong>Pack &amp; Send Australia</strong></a
+                  ><br />
+                  Tech stack: <strong>.NET</strong> (C#), <strong>Angular</strong>,
+                  <strong>Azure</strong>, <strong>SQL Server</strong>.<br />
+                  Shipping and logistics platform supporting courier/freight
+                  services, including online quoting/booking and shipment tracking,
+                  with eCommerce shipping and fulfilment workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div class="row timeline-element separline mb-5">
             <div class="timeline-date-panel col-12 col-md-4">
               <div class="time-line-date-content">
@@ -667,6 +1258,7 @@
       </div>
     </section>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/embla/embla.min.js"></script>
     <script src="assets/ytplayer/index.js"></script>
     <script src="assets/dropdown/js/navbar-dropdown.js"></script>
     <script src="assets/theme/js/script.js"></script>
@@ -693,6 +1285,79 @@
           }
         }
       }
+
+      (function () {
+        function initPortfolioEmbla(root) {
+          if (!root || typeof EmblaCarousel === "undefined") return;
+
+          var viewport = root.querySelector(".embla__viewport");
+          if (!viewport) return;
+
+          var embla = EmblaCarousel(viewport, {
+            align: "start",
+            loop: true,
+            draggable: true,
+            skipSnaps: false,
+          });
+
+          var prevBtn = root.querySelector(".embla__button--prev");
+          var nextBtn = root.querySelector(".embla__button--next");
+
+          if (prevBtn) prevBtn.addEventListener("click", embla.scrollPrev, false);
+          if (nextBtn) nextBtn.addEventListener("click", embla.scrollNext, false);
+
+          function updateButtons() {
+            if (prevBtn) prevBtn.disabled = !embla.canScrollPrev();
+            if (nextBtn) nextBtn.disabled = !embla.canScrollNext();
+          }
+
+          embla.on("select", updateButtons);
+          embla.on("init", updateButtons);
+
+          var autoplay = root.getAttribute("data-auto-play") === "true";
+          var intervalSeconds = parseFloat(
+            root.getAttribute("data-auto-play-interval") || "2"
+          );
+
+          var intervalId = null;
+
+          function startAutoplay() {
+            if (!autoplay || intervalSeconds <= 0 || intervalId) return;
+            intervalId = window.setInterval(function () {
+              if (document.hidden) return;
+              if (embla.canScrollNext()) embla.scrollNext();
+              else embla.scrollTo(0);
+            }, intervalSeconds * 1000);
+          }
+
+          function stopAutoplay() {
+            if (!intervalId) return;
+            window.clearInterval(intervalId);
+            intervalId = null;
+          }
+
+          root.addEventListener("mouseenter", stopAutoplay);
+          root.addEventListener("mouseleave", startAutoplay);
+          root.addEventListener("focusin", stopAutoplay);
+          root.addEventListener("focusout", startAutoplay);
+          root.addEventListener("pointerdown", stopAutoplay);
+          root.addEventListener("pointerup", startAutoplay);
+          document.addEventListener("visibilitychange", function () {
+            if (document.hidden) stopAutoplay();
+            else startAutoplay();
+          });
+
+          startAutoplay();
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .querySelectorAll(".portfolio-embla")
+            .forEach(function (carousel) {
+              initPortfolioEmbla(carousel);
+            });
+        });
+      })();
     </script>
 
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
