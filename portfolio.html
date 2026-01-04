@@ -135,6 +135,7 @@
       .portfolio-embla .embla__viewport {
         overflow: hidden;
         width: 100%;
+        touch-action: pan-y;
       }
 
       .portfolio-embla .embla__viewport.is-draggable {
@@ -209,17 +210,6 @@
         margin-right: 1.25rem;
       }
 
-      @media (max-width: 768px) {
-        .portfolio-embla .embla__viewport {
-          overflow-x: auto;
-          overflow-y: hidden;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        .portfolio-embla .embla__container {
-          transform: none !important;
-        }
-      }
     </style>
     <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
   </head>

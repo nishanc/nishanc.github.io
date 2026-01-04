@@ -115,6 +115,137 @@
         }
       }
     </script>
+
+    <style>
+      /* Ensure gallery modal backdrop is behind the fullscreen image */
+      .modal-backdrop {
+        z-index: -1 !important;
+      }
+
+      .modal-backdrop.show {
+        z-index: -1 !important;
+      }
+
+      .modal {
+        z-index: 1055 !important;
+      }
+
+      .modal .modal-dialog,
+      .modal .modal-content {
+        position: relative;
+        z-index: 1060 !important;
+      }
+
+      /* Push the gallery modal close control below the fixed navbar */
+      .modal.mbr-slider .close {
+        margin-top: clamp(48px, 8vh, 88px) !important;
+        right: 60px !important;
+        left: auto !important;
+      }
+
+      /* Disable gallery click-to-zoom/lightbox behavior */
+      .mbr-gallery .item-wrapper {
+        pointer-events: none !important;
+        cursor: default !important;
+      }
+
+      .mbr-gallery .item-wrapper img {
+        cursor: default !important;
+      }
+
+      .mbr-gallery .icon-wrapper {
+        display: none !important;
+      }
+    </style>
+
+    <script>
+      (function () {
+        function applyLazyLoading(root) {
+          var scope = root && root.querySelectorAll ? root : document;
+
+          var images = scope.querySelectorAll("img");
+          for (const img of images) {
+            if (img.closest && img.closest(".navbar-logo")) continue;
+            if (!img.getAttribute("loading")) img.setAttribute("loading", "lazy");
+            if (!img.getAttribute("decoding")) img.setAttribute("decoding", "async");
+          }
+
+          var iframes = scope.querySelectorAll("iframe");
+          for (const iframe of iframes) {
+            if (!iframe.getAttribute("loading")) iframe.setAttribute("loading", "lazy");
+          }
+        }
+
+        // Run early and also after DOM is ready.
+        applyLazyLoading(document);
+        document.addEventListener("DOMContentLoaded", function () {
+          applyLazyLoading(document);
+        });
+
+        // Catch images added later (e.g., in modals/carousels).
+        if ("MutationObserver" in globalThis) {
+          var observer = new MutationObserver(function (mutations) {
+            for (const mutation of mutations) {
+              var added = mutation.addedNodes;
+              if (!added) continue;
+              for (const node of added) {
+                if (!node || node.nodeType !== 1) continue;
+                applyLazyLoading(node);
+              }
+            }
+          });
+          observer.observe(document.documentElement, { childList: true, subtree: true });
+        }
+      })();
+    </script>
+
+    <script>
+      (function () {
+        function disableGalleryLightbox() {
+          var triggerElements = document.querySelectorAll(
+            ".mbr-gallery [data-bs-toggle='modal'], .mbr-gallery [data-toggle='modal']"
+          );
+          for (const el of triggerElements) {
+            if (el.dataset) {
+              delete el.dataset.bsToggle;
+              delete el.dataset.toggle;
+              delete el.dataset.bsTarget;
+              delete el.dataset.target;
+            }
+          }
+
+          var slideElements = document.querySelectorAll(
+            ".mbr-gallery [data-bs-target], .mbr-gallery [data-target], .mbr-gallery [data-bs-slide-to], .mbr-gallery [data-slide-to]"
+          );
+          for (const el of slideElements) {
+            if (el.dataset) {
+              delete el.dataset.bsTarget;
+              delete el.dataset.target;
+              delete el.dataset.bsSlideTo;
+              delete el.dataset.slideTo;
+            }
+          }
+        }
+
+        // Run once now and again after DOM is ready (covers late-injected content).
+        disableGalleryLightbox();
+        document.addEventListener("DOMContentLoaded", disableGalleryLightbox);
+
+        // Hard-stop any remaining click behavior inside gallery sections.
+        document.addEventListener(
+          "click",
+          function (event) {
+            var insideGalleryItem = event.target && event.target.closest
+              ? event.target.closest(".mbr-gallery .item-wrapper")
+              : null;
+            if (!insideGalleryItem) return;
+            event.preventDefault();
+            event.stopPropagation();
+          },
+          true
+        );
+      })();
+    </script>
     <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
   </head>
 
@@ -2659,16 +2790,16 @@
       window.addEventListener("scroll", reveal);
 
       function reveal() {
-        let elements = document.querySelectorAll(".reveal");
+        const elements = document.querySelectorAll(".reveal");
+        const windowHeight = globalThis.innerHeight;
+        const revealPoint = 100;
 
-        for (let index = 0; index < elements.length; index++) {
-          let windowHeight = window.innerHeight;
-          let revealTop = elements[index].getBoundingClientRect().top;
-          var revealPoint = 100;
+        for (const element of elements) {
+          const revealTop = element.getBoundingClientRect().top;
           if (revealTop < windowHeight - revealPoint) {
-            elements[index].classList.add("active");
+            element.classList.add("active");
           } else {
-            elements[index].classList.remove("active");
+            element.classList.remove("active");
           }
         }
       }
